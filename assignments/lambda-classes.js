@@ -43,6 +43,13 @@ class Student extends Person{
         this.favSubjects.map(subject => {console.log(`This is one of my favorite subjects: ${subject}`)});
         return this.favSubjects.map(subject => `This is one of my favorite subjects: ${subject}`);
     }
-
     
+    prAssignement(subject){
+        console.log(`${this.name} has submitted a PR for ${subject}`);
+        return `${this.name} has submitted a PR for ${subject}`;
+    }
+
+    sprintChallenge(subject){
+        console.log(`${this.name} has begun sprint chanllenge on ${subject}`);
+    }
 }
