@@ -53,3 +53,22 @@ class Student extends Person{
         console.log(`${this.name} has begun sprint chanllenge on ${subject}`);
     }
 }
+
+
+class ProjectManager extends Instructor{
+    constructor(pmAttrs){
+        super(pmAttrs);
+        this.gradClassName = pmAttrs.gradClassName,
+        this.favInstructor = pmAttrs.favInstructor
+    }
+
+    standUp(channel){
+        console.log(`${this.name} announces to ${channel}, @channel study times!`);
+        return `${this.name} announces to ${channel}, @channel study times!`;
+    }
+
+    debugsCode(student, subject){
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}.`);
+        return `${this.name} debugs ${student.name}'s code on ${subject}.`;
+    }
+}
