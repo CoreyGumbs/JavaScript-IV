@@ -30,3 +30,17 @@ class Instructor extends Person{
         return `${student.name} receives a perfect score on ${subject}`;
     }
 }
+
+class Student extends Person{
+    constructor(studentAttrs){
+        super(studentAttrs);
+        this.previousBackground =  studentAttrs.previousBackground,
+        this.className =  studentAttrs.className,
+        this.favSubjects = studentAttrs.favSubjects
+    }
+
+    listSubjects(){
+        this.favSubjects.map(subject => {console.log(`This is one of my favorite subjects: ${subject}`)});
+        return this.favSubjects.map(subject => `This is one of my favorite subjects: ${subject}`);
+    }
+}
